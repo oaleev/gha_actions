@@ -7,18 +7,15 @@ on:
       - lab
 
 jobs:
-  Auto_Approve:
+  auto_approve:
     name: Raise_Auto_Approve_PR
-
     if: {{ (github.actor == 'jaleev') }}
-    
     runs-on: [self-hosted]
-  
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
-        - name: Create PR
-          id: create_pr
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create PR
+        id: create_pr
           run: |
             echo "${{githu.actor}}
             echo "Completed"
