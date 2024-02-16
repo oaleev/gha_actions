@@ -17,6 +17,6 @@ jobs:
       - name: Create PR
         id: create_pr
         run: |
-          echo "${{githu.actor}}
+          echo "${{github.actor}}
           echo "Completed"
     
