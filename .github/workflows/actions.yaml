@@ -17,4 +17,6 @@ jobs:
       - name: Create PR
         id: create_pr
         run: |
-          echo "Hello World!!"
+          echo "Creating the PR"
+          echo ${{ (github.actor) }}
+
