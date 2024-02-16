@@ -12,14 +12,14 @@ jobs:
 
     if: {{ (github.actor == 'jaleev') }}
     
-    runs-on: [self-hosted]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Create PR
-        id: create_pr
-        run: |
-          echo "${{githu.actor}}
-          echo "Completed"
+      runs-on: [self-hosted]
+  
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+        - name: Create PR
+          id: create_pr
+          run: |
+            echo "${{githu.actor}}
+            echo "Completed"
     
