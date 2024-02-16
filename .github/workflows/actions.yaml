@@ -1,0 +1,25 @@
+name : auto_approve_the_pr
+
+on:
+  push:
+    branches:
+      - main
+      - lab
+
+jobs:
+  Auto_Approve:
+    name: Raise_Auto_Approve_PR
+
+    if: {{ (github.actor == 'jaleev') }}
+    
+    runs-on: [self-hosted]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create PR
+        id: create_pr
+        run: |
+          echo "${{githu.actor}}
+          echo "Completed"
+    
