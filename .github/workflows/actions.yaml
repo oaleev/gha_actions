@@ -10,13 +10,11 @@ jobs:
   auto_approve:
     name: Raise_Auto_Approve_PR
     if: {{ (github.actor == 'jaleev') }}
-    runs-on: [self-hosted]
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Create PR
         id: create_pr
         run: |
-          echo "${{github.actor}}
-          echo "Completed"
-    
+          echo "Hello World!!"
