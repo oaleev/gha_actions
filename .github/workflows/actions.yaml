@@ -9,7 +9,7 @@ on:
 jobs:
   auto_approve:
     name: Raise_Auto_Approve_PR
-    if: {{ (github.actor == 'jaleev') }}
+    if: ${{ (github.actor == 'jaleev') }}
     runs-on: self-hosted
     steps:
       - name: Checkout
