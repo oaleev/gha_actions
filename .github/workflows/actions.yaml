@@ -12,7 +12,7 @@ jobs:
 
     if: {{ (github.actor == 'jaleev') }}
     
-      runs-on: [self-hosted]
+    runs-on: [self-hosted]
   
       steps:
         - name: Checkout
